@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import './Register.css';
 
 const Register = () => {
     const [username, setUsername] = useState('');
@@ -7,16 +8,16 @@ const Register = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        // כאן נוסיף את הלוגיקה לשליחת הנתונים לשרת להירשם
+        //here needed to add a server  log in logic
         console.log('User Registered:', { username, email, password });
     };
 
     return (
         <div className="register">
-            <h2>הירשם ל-HarmonyHub</h2>
+            <h2>register-HarmonyHub</h2>
             <form onSubmit={handleSubmit}>
                 <div>
-                    <label for="username">שם משתמש:</label>
+                    <label for="username">username:</label>
                     <input
                         type="text"
                         id="username"
@@ -26,7 +27,7 @@ const Register = () => {
                     />
                 </div>
                 <div>
-                    <label for="email">אימייל:</label>
+                    <label for="email">email:</label>
                     <input
                         type="email"
                         id="email"
@@ -36,7 +37,7 @@ const Register = () => {
                     />
                 </div>
                 <div>
-                    <label for="password">סיסמה:</label>
+                    <label for="password">password:</label>
                     <input
                         type="password"
                         id="password"
@@ -45,7 +46,7 @@ const Register = () => {
                         required
                     />
                 </div>
-                <button type="submit">הרשמה</button>
+                <button type="submit">submit</button>
             </form>
         </div>
     );

@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import './Login.css';
 
 const Login = () => {
     const [username, setUsername] = useState('');
@@ -6,16 +7,16 @@ const Login = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        // כאן נוסיף את הלוגיקה לשליחת הנתונים לשרת להתחברות
+        // here needed to add a server  log in logic
         console.log('User Logged In:', { username, password });
     };
 
     return (
         <div className="login">
-            <h2>התחבר ל-HarmonyHub</h2>
+            <h2>Log in - HarmonyHub</h2>
             <form onSubmit={handleSubmit}>
                 <div>
-                    <label for="username">שם משתמש:</label>
+                    <label for="username">username:</label>
                     <input
                         type="text"
                         id="username"
@@ -25,7 +26,7 @@ const Login = () => {
                     />
                 </div>
                 <div>
-                    <label for="password">סיסמה:</label>
+                    <label for="password">password:</label>
                     <input
                         type="password"
                         id="password"
@@ -34,7 +35,7 @@ const Login = () => {
                         required
                     />
                 </div>
-                <button type="submit">התחבר</button>
+                <button type="submit">submit</button>
             </form>
         </div>
     );

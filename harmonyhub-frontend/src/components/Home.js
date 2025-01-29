@@ -1,22 +1,22 @@
-// components/Home.js
+import React from 'react';
 import { Link } from 'react-router-dom';
+import './Home.css';
+
 function Home() {
     return (
-        <div>
+        <div className="home">
             <h1>Welcome to HarmonyHub!</h1>
             <p>Your one-stop hub for sharing and enjoying music.</p>
-            <div style={{marginTop: '20px'}}>
                 <Link to="/register">
-                    <button style={{margin: '5px', padding: '10px 20px', cursor: 'pointer'}}>
+                    <button class="login-btn">
                         Register
                     </button>
                 </Link>
                 <Link to="/login">
-                    <button style={{margin: '5px', padding: '10px 20px', cursor: 'pointer'}}>
+                    <button>
                         Login
                     </button>
                 </Link>
-            </div>
         </div>
     );
 }

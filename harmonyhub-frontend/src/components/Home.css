@@ -1,0 +1,40 @@
+/* Home.css */
+
+.home {
+    display: flex;
+    justify-content: center; /* מרכז את התוכן בצורה אופקית */
+    align-items: center; /* מרכז את התוכן בצורה אנכית */
+    height: 100vh; /* גובה מלא של הדף */
+    flex-direction: column; /* מקם את התוכן בעמודה */
+    font-family: Arial, sans-serif;
+    text-align: center; /* מרכז את הטקסט */
+}
+
+h1 {
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+button {
+    width: 100px;
+    margin: 8px;
+    padding: 6px 5px;
+    font-size: 14px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
