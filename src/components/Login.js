@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import './Login.css';
 
 const Login = () => {
@@ -7,7 +8,6 @@ const Login = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        // here needed to add a server  log in logic
         console.log('User Logged In:', { username, password });
     };
 
@@ -16,7 +16,7 @@ const Login = () => {
             <h2>Log in - HarmonyHub</h2>
             <form onSubmit={handleSubmit}>
                 <div>
-                    <label for="username">username:</label>
+                    <label htmlFor="username">username:</label>
                     <input
                         type="text"
                         id="username"
@@ -26,7 +26,7 @@ const Login = () => {
                     />
                 </div>
                 <div>
-                    <label for="password">password:</label>
+                    <label htmlFor="password">password:</label>
                     <input
                         type="password"
                         id="password"
@@ -37,6 +37,7 @@ const Login = () => {
                 </div>
                 <button type="submit">submit</button>
             </form>
+            <Link to="/" className="back-home-button">⬅</Link>
         </div>
     );
 };

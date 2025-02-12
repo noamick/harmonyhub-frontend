@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import './Register.css';
 
 const Register = () => {
@@ -8,16 +9,15 @@ const Register = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        //here needed to add a server  log in logic
         console.log('User Registered:', { username, email, password });
     };
 
     return (
         <div className="register">
-            <h2>register-HarmonyHub</h2>
+            <h2>Register - HarmonyHub</h2>
             <form onSubmit={handleSubmit}>
                 <div>
-                    <label for="username">username:</label>
+                    <label htmlFor="username">Username:</label>
                     <input
                         type="text"
                         id="username"
@@ -27,7 +27,7 @@ const Register = () => {
                     />
                 </div>
                 <div>
-                    <label for="email">email:</label>
+                    <label htmlFor="email">Email:</label>
                     <input
                         type="email"
                         id="email"
@@ -37,7 +37,7 @@ const Register = () => {
                     />
                 </div>
                 <div>
-                    <label for="password">password:</label>
+                    <label htmlFor="password">Password:</label>
                     <input
                         type="password"
                         id="password"
@@ -46,8 +46,9 @@ const Register = () => {
                         required
                     />
                 </div>
-                <button type="submit">submit</button>
+                <button type="submit">Submit</button>
             </form>
+            <Link to="/" className="back-home-button">⬅</Link>
         </div>
     );
 };
